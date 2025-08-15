@@ -7,4 +7,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name : echo context
-          run: echo "${{github.event}}"
+          run: echo "${{github.event_name}}"
+        - name : echo avi 
+          run: echo "Avi is here${{github.event.issue.title}}"
