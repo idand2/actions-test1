@@ -1,10 +1,10 @@
-  -name: second_workflow
-   on:
-     issues:
-        types: [opened, edited, ,milestone]
-   jobs:
-      test:
-       runs-on: ubuntu-latest
-       steps:
-         - name : echo context
-           run: echo "{{github.event.issue.title}}"
+on:
+  issues:
+    types: [opened, edited, milestoned]
+        
+jobs:
+    test:
+      runs-on: ubuntu-latest
+      steps:
+        - name : echo context
+          run: echo "{{github.event.issue.title}}"
