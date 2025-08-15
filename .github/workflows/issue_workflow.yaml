@@ -1,8 +1,7 @@
   -name: second_workflow
    on:
      issues:
-       branches:
-         - master
+        types: [opened, edited, ,milestone]
    jobs:
       test:
        runs-on: ubuntu-latest
